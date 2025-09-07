@@ -29,9 +29,9 @@
 						<h2>In this tutorial...</h2>
 						<ul>
 							<li class="fragment" data-fragment-index="1">Representing knowledge with graphs and triples</li>
-							<li class="fragment" data-fragment-index="2">Identifying things with URIs</li>
-							<li class="fragment" data-fragment-index="3">Representing graphs and triples with RDF</li>
-							<li class="fragment" data-fragment-index="4">Knowledge Graphs</li>
+							<li class="fragment" data-fragment-index="2">Knowledge Graphs</li>
+							<li class="fragment" data-fragment-index="3">Identifying things with URIs</li>
+							<li class="fragment" data-fragment-index="4">Representing graphs and triples with RDF</li>
 							<li class="fragment" data-fragment-index="5">The Semantic Web</li>
 							<li class="fragment" data-fragment-index="6">Linked Data / The Web of Data</li>
 						</ul>
@@ -41,30 +41,208 @@
 					<section>
 						<h1>Representing knowledge with graphs and triples</h1>
 					</section>
-				</section>
-				<section>
 					<section>
-						<h1>Identifying things with URIs</h1>
-					</section>
-				</section>
-				<section>
-					<section>
-						<h1>Representing graphs and triples with RDF</h1>
+						What is knowledge?
+						What is Oxford?
+						Let's ask Chat GTP..
+						We need more context?
+						DIKW pyramind
+						Justified true beliefs
+						Formal knowledge Representation
+						How do we share knowledge?
+						Requires common language - syntax, semantics, taxonomy, thesauri, onotologies
+						We use language to represent Knowledge
+						Semiotic triangle
+						Paraphrasing / ambiguity make langage difficult
+						This makes it difficult for machines
+						The machine must interpret the information correctly to "understand"
+						Semantics is the study and interpretation of signs or symbols
+						Semantics depends on context and pragmatics.
+						If I say "I am going to Oxford" do I mean the town or the univeristy?
+						It is likely to be interpreted based on the context.
+						If I am speaking to a young person who has just passed their A levels I might assume that it it is the university.
+						If I am speaking to an elderly American tourist then I might assume they are visiting the town.
+						Pragmatics is the intention of a message for example "is there any coffee left?"
+						We would interpret this question based on where we are.
+						There is no need for us to say "do you know if there any coffee left in that coffee jug over there?"
+						In a sentence you normally have subject predicate and object.
+						For example:
+						St Edmund Hall -> is in -> Oxford
+						St Edmund Hall -> is part of -> Oxford university
+						Terry Jones -> studied at -> St Edmund Hall
+						subject -> predicate -> object
+						node -> edge -> node = graph
+						We can see that the edge is directed so we have a directed graph
+						We can also see that the edge has a label so this means we have a directed edge-labeled graph
+						Entities: St Edmunds Hall, Oxford, Oxford Univeristy
+						Relations: is in, is part of, studied at
+						Node == Entities
+						Edges == relations
+						Terry Jones -> born in -> XXXX
+						Terry Jones -> died in -> XXXX
+						These are not entities but literals
+						Terry Jones is a Person
+						Person is not an entity it is a class
+
+
 					</section>
 				</section>
 				<section>
 					<section>
 						<h1>Knowledge Graphs</h1>
+						> Show a larger graph
+						Computer still does not understand the meaning
+						Understanding has to be intrepetted by software by someone who can read the labels
+						But things can change and then the software won't understand anymore
+						Implicit vs Explicit Knowledge
+						A knowledge graph generally describes real world entities and their relations, organized in a graph
+						Defines classes and relations in a schema (explicit knowledge relations)
+						Allows for potentially interrelating arbitary Entities
+						Covers various topical domains
+						Representing information as a graph is not new and has been used for a long time
+						To avoid having to encode meaning into software we need an explicit knowledge Representation so that we have a representaion that can be "understood" by the computer without a human having to write specific code
+						For this we have ontoglogies we are based on mathematical logic - this can then be used by a general inference engine or reasoner and there is no need to write specific code anymore
+						Increasingly this understand can also be used by LLMs
+
 					</section>
 				</section>
 				<section>
 					<section>
+						<h1>Identifying things with URIs</h1>
+						What is this? Show a photo of an apple.
+						Hopefully they sau "an apple".
+						And then what is this? Show an actual apple.
+						Hopefully they say "an apple".
+						So what is the difference?
+						One is a picture (not an apple) - and yet we also knew it was an apple.
+						This is because humans can understand things by symbols.
+						How do we make a computer understand the difference between things?
+						On the web we can this with URIs A Uniform Resource Identifier.
+						There are also IRIs which allow more diverse language and characterstics
+						URI = schema / domain/host / path / fragment
+						Normally on the web URIs are documents but how do we talk about apples?
+						URLs = addresses for web documents
+						URL identifies what exists on the web (document)
+						URI identifies on the web what exists (anything)
+						URI for an apple?
+						http://example.org/apple
+						http://example.org/Apfel
+						http://example.org/pomme
+						http://example.org/manzana
+						What about Apple computers?
+						We can have a language independent URI for example:
+						https://www.wikidata.org/entity/Q89 (apple the fruit)
+						https://www.wikidata.org/entity/Q312 (Apple the company)
+						Apple has label en, de, fr, es (diagram)
+						The apple itself cannot be on the web but we can describe the apple
+						This is a designator (the URI) -> designatum (the apple) relationship
+						When I access the URI I might get some representation of the apple, perhaps a web page or
+						HTTP content negotiation allows you to chose the representation you want
+						So you can ask for the content type you want (demo of http://wikidata.org./entity/Q39)
+						curl -L -H "Accept: text/html" http://wikidata.org/entity/Q89
+						curl -L -H "Accept: application/json" http://wikidata.org/entity/Q89
+						curl -L -H "Accept: text/turtle" http://wikidata.org/entity/Q89
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Representing graphs and triples with RDF</h1>
+						We already know how to represent facts with subject -> predicate -> object statements such as
+						St Edmund Hall -- is in --> Oxford
+						If we want to express this in RDF we need to use URIs
+						Subject(URI) -> Property (URI) -> Object/Value (URI/Literal)
+						e.g. dbr:University_of_Oxford dbo:location dbr:Oxford
+						** show as a graph **
+						In RDF the predicate is known as a Property
+						** show Oxford as a graph with type and population ** (use https://www.w3.org/RDF/Validator/)
+						XML schema types xsd:string, xsd:integer, xsd:nonNegativeInteger
+						e.g. dbr:Oxford dbo:populationTotal "151584"^^xsd:nonNegativeInteger
+						Blank nodes (existence of individual but not named) - example?
+						A RDF triple is a subject predicate object
+						Subject can be a Blank node or a IRI
+						Object is an IRI
+						Subject can be a blank node, IRI or literals
+						An RDF graph is a set of RDF triples
+						Serialization formats
+						N-triples (hard to read)
+						RDF/XML (hard to read)
+						N-Quads
+						RDFa
+						JSON-LD
+						Notation3
+						HDT
+						HexTuples
+						Turtle (abbreviated form or N-triples) - nice to read we will use this
+						N-Triples to Turtle example
+						Triples end with a .
+						Subject can be continued with ;
+						Terry Jones almaMater St Edmunds College;
+												directed Monty Python and the Holy Grail
+						predicate can be continued with ,
+						Terry Jones directed Monty Python and the Holy Grail, Life of Brian, Meaning of Life
+
+						Declare prefixes (syntatic sugar)
+						Use @base &lt;Oxford&gt;
+						N-ary relations
+						Terry Jones directed film/date
+						[] as subject (anonymous)
+						[...] as object (nested anonymous blank nodes)
+						Derefernceable blank nodes e.g. _:ID1 ?p ?o
+
+						RDF Schema
+						A high level vocabulary that allows us to define vocabularies
+						Classes properties and instances
+						Instances are indivual members of a class and can be instances of other classes
+						If I want to describe a schema in RDF I need to use RDFS
+						If I want to say something is a class I use rdf:type rdfs:Class
+						If I want to say something is an instance I use rdf:type
+						Properties are all instances of rdf:Property (not rdfs:Property)
+						We can also definte rdfs:domain and rdfs:range
+						Everything is a an rdfs:Resource
+						rdfs:subClassOf
+						rdfs:label
+						rdfs:seeAlso
+						rdfs:isDefinedBy
+						rdfs:comment
+						Example schema (class, property and instance definitions)
+						Datatses that agree on vocabularies are more easily integrated - they speak the same Language
+						Class is always uppercase, properties are always lower case
+					</section>
+				</section>
+
+				<section>
+					<section>
 						<h1>The Semantic Web</h1>
+						Semantic Web is an extenation of the WWW in which information is given well defined web as defined by TBL
+						A kind of global database tha contains a network of semantic propositions
+						At the bottom we have the URIs
+						RDF allows us to encode triples
+						OWL RDFS SKOS provide ways of modelling (also encoded in RDF)
+						SPARQL can be used to query RDF based somewhat on SQL
+						Demo of a SPARQL endpoint (DBpedia, Wikidata)
+						Semantic Web technogy stack
+						Meaning is made Explicit
+						information can be processed automatically
+						data can be integrata
+						</table>
 					</section>
 				</section>
 				<section>
 					<section>
 						<h1>Linked Data / The Web of Data</h1>
+						The traditionsal Web is or the web of documents is made up of HTML (representational language), HTTP (communications protocol) and URIs (identification and address)
+						The web of data on the other hand is made up of URI HTTP and RDF
+						The web of data is an upgrade of the web of documenets which "the web of human-readable is being merged.. " (quote from TBL)
+						How do we access the Web of Data?
+						You need a service
+						https://lod-cloud.net/#
+						Show the history of how the size has changed
+						Traditionally data on the web was accessed via APIs but you had to know the schema and if something changed it would break your application
+						There are differetnt APIs for different services. This creates data islands.
+						Encoding the data as RDF means you have a generic interface with access over http
+						The Linked Data principles
+						5 star linked open data (from TBL)
+						FAIR Principles - Linked Data complies to these principles
 					</section>
 				</section>
 			</div>
