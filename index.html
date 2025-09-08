@@ -46,7 +46,55 @@
 						What is Oxford?
 						Let's ask Chat GTP..
 						We need more context?
-						DIKW pyramind
+					</section>
+					<section>
+						<!-- <img height="500px" src="images/DIKW.png"/> -->
+						<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f8f9fa"/>
+
+  <!-- Single pyramid with horizontal divisions -->
+  <polygon points="80,250 320,250 200,50" fill="none" stroke="#333" stroke-width="3"/>
+
+  <!-- Horizontal dividing lines -->
+  <line x1="110" y1="200" x2="290" y2="200" stroke="#333" stroke-width="2"/>
+  <line x1="140" y1="150" x2="260" y2="150" stroke="#333" stroke-width="2"/>
+  <line x1="170" y1="100" x2="230" y2="100" stroke="#333" stroke-width="2"/>
+
+  <!-- Colored sections -->
+  <polygon points="80,250 320,250 290,200 110,200" fill="#e3f2fd" opacity="0.8"/>
+  <polygon points="110,200 290,200 260,150 140,150" fill="#e8f5e8" opacity="0.8"/>
+  <polygon points="140,150 260,150 230,100 170,100" fill="#fff3e0" opacity="0.8"/>
+  <polygon points="170,100 230,100 200,50" fill="#fce4ec" opacity="0.8"/>
+
+  <!-- Labels -->
+  <text x="200" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1976d2">DATA</text>
+  <text x="200" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#666">Raw facts and figures</text>
+
+  <text x="200" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#388e3c">INFORMATION</text>
+  <text x="200" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#666">Processed data with context</text>
+
+  <text x="200" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#f57c00">KNOWLEDGE</text>
+  <text x="200" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#666">Information with experience</text>
+
+  <text x="200" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#c2185b">WISDOM</text>
+  <text x="200" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#666">Knowledge with judgment</text>
+
+  <!-- Title -->
+  <text x="200" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#333">DIKW Pyramid</text>
+
+  <!-- Arrows showing progression -->
+  <!-- <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    </marker>
+  </defs> -->
+
+  <!-- <line x1="50" y1="275" x2="100" y2="275" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="75" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">Processing</text> -->
+</svg>
+					</section>
+					<section>
 						Justified true beliefs
 						Formal knowledge Representation
 						How do we share knowledge?
@@ -78,8 +126,8 @@
 						Relations: is in, is part of, studied at
 						Node == Entities
 						Edges == relations
-						Terry Jones -> born in -> XXXX
-						Terry Jones -> died in -> XXXX
+						Terry Jones -> born in -> 1942
+						Terry Jones -> died in -> 2020
 						These are not entities but literals
 						Terry Jones is a Person
 						Person is not an entity it is a class
@@ -90,7 +138,9 @@
 				<section>
 					<section>
 						<h1>Knowledge Graphs</h1>
-						> Show a larger graph
+					</section>
+					<section>
+						Show a larger graph
 						Computer still does not understand the meaning
 						Understanding has to be intrepetted by software by someone who can read the labels
 						But things can change and then the software won't understand anymore
@@ -103,12 +153,13 @@
 						To avoid having to encode meaning into software we need an explicit knowledge Representation so that we have a representaion that can be "understood" by the computer without a human having to write specific code
 						For this we have ontoglogies we are based on mathematical logic - this can then be used by a general inference engine or reasoner and there is no need to write specific code anymore
 						Increasingly this understand can also be used by LLMs
-
 					</section>
 				</section>
 				<section>
 					<section>
 						<h1>Identifying things with URIs</h1>
+					</section>
+					<section>
 						What is this? Show a photo of an apple.
 						Hopefully they sau "an apple".
 						And then what is this? Show an actual apple.
@@ -117,7 +168,7 @@
 						One is a picture (not an apple) - and yet we also knew it was an apple.
 						This is because humans can understand things by symbols.
 						How do we make a computer understand the difference between things?
-						On the web we can this with URIs A Uniform Resource Identifier.
+						On the web we do can this with URIs A Uniform Resource Identifier.
 						There are also IRIs which allow more diverse language and characterstics
 						URI = schema / domain/host / path / fragment
 						Normally on the web URIs are documents but how do we talk about apples?
@@ -147,15 +198,141 @@
 				<section>
 					<section>
 						<h1>Representing graphs and triples with RDF</h1>
-						We already know how to represent facts with subject -> predicate -> object statements such as
-						St Edmund Hall -- is in --> Oxford
+					</section>
+					<section>
+						We already know how to represent facts with
+
+						subject -> predicate -> object
+
+						statements such as
+
+						St Edmund Hall -- is part of --> Oxford University
+					</section>
+					<section>
 						If we want to express this in RDF we need to use URIs
 						Subject(URI) -> Property (URI) -> Object/Value (URI/Literal)
 						e.g. dbr:University_of_Oxford dbo:location dbr:Oxford
-						** show as a graph **
+					</section>
+					<section>
+						<svg width="512pt" height="113pt"
+ viewBox="0.00 0.00 511.57 113.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 109)">
+<title>%3</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-109 507.57,-109 507.57,4 -4,4"/>
+<text text-anchor="middle" x="251.78" y="-37.8" font-family="Times,serif" font-size="14.00">Namespaces:</text>
+<text text-anchor="middle" x="251.78" y="-22.8" font-family="Times,serif" font-size="14.00">dbo: http://dbpedia.org/ontology/</text>
+<text text-anchor="middle" x="251.78" y="-7.8" font-family="Times,serif" font-size="14.00">dbr: http://dbpedia.org/resource/</text>
+<!-- Rdbr:University_of_Oxford -->
+<g id="node1" class="node">
+<title>Rdbr:University_of_Oxford</title>
+<ellipse fill="none" stroke="blue" cx="128.04" cy="-87" rx="128.08" ry="18"/>
+<text text-anchor="middle" x="128.04" y="-83.3" font-family="Times,serif" font-size="14.00">dbr:University_of_Oxford</text>
+</g>
+<!-- Rdbr:Oxford -->
+<g id="node2" class="node">
+<title>Rdbr:Oxford</title>
+<ellipse fill="none" stroke="blue" cx="441.82" cy="-87" rx="61.99" ry="18"/>
+<text text-anchor="middle" x="441.82" y="-83.3" font-family="Times,serif" font-size="14.00">dbr:Oxford</text>
+</g>
+<!-- Rdbr:University_of_Oxford&#45;&gt;Rdbr:Oxford -->
+<g id="edge1" class="edge">
+<title>Rdbr:University_of_Oxford&#45;&gt;Rdbr:Oxford</title>
+<path fill="none" stroke="black" d="M256.3,-87C295.06,-87 336.27,-87 369.88,-87"/>
+<polygon fill="black" stroke="black" points="370.06,-90.5 380.06,-87 370.06,-83.5 370.06,-90.5"/>
+<text text-anchor="middle" x="318.08" y="-90.8" font-family="Times,serif" font-size="14.00">dbo:location</text>
+</g>
+</g>
+</svg>
+					</section>
+					<section>
 						In RDF the predicate is known as a Property
 						** show Oxford as a graph with type and population ** (use https://www.w3.org/RDF/Validator/)
 						XML schema types xsd:string, xsd:integer, xsd:nonNegativeInteger
+					</section>
+					<section>
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="422pt" height="133pt" viewBox="0.00 0.00 422.11 132.80">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 128.8)">
+<title>%0</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-128.8 418.1091,-128.8 418.1091,4 -4,4"/>
+<!-- N0 -->
+<g id="node1" class="node">
+<title>N0</title>
+<g id="a_node1"><a xlink:href="http://dbpedia.org/resource/Oxford" xlink:title="dbr:Oxford">
+<ellipse fill="none" stroke="#000000" cx="203.2675" cy="-106.8" rx="54.4566" ry="18"/>
+<text text-anchor="middle" x="203.2675" y="-102.6" font-family="Times,serif" font-size="14.00" fill="#000000">dbr:Oxford</text>
+</a>
+</g>
+</g>
+<!-- N1 -->
+<g id="node2" class="node">
+<title>N1</title>
+<g id="a_node2"><a xlink:href="http://dbpedia.org/resource/Oxford" xlink:title="Oxford@en">
+<polygon fill="#ffff00" stroke="#ffff00" points="82.3038,-36 .2312,-36 .2312,0 82.3038,0 82.3038,-36"/>
+<text text-anchor="middle" x="41.2675" y="-13.8" font-family="Times,serif" font-size="14.00" fill="#000000">Oxford@en</text>
+</a>
+</g>
+</g>
+<!-- N0&#45;&gt;N1 -->
+<g id="edge3" class="edge">
+<title>N0-&gt;N1</title>
+<g id="a_edge3"><a xlink:href="http://www.w3.org/2000/01/rdf-schema#label" xlink:title="rdfs:label">
+<path fill="none" stroke="#000000" d="M175.0493,-91.3322C149.6913,-77.4323 112.1093,-56.8318 83.2292,-41.0012"/>
+<polygon fill="#000000" stroke="#000000" points="84.6362,-37.7812 74.1848,-36.0436 81.2715,-43.9195 84.6362,-37.7812"/>
+</a>
+</g>
+<g id="a_edge3-label"><a xlink:href="http://www.w3.org/2000/01/rdf-schema#label" xlink:title="rdfs:label">
+<text text-anchor="middle" x="163.7009" y="-58.2" font-family="Times,serif" font-size="14.00" fill="#000000">rdfs:label</text>
+</a>
+</g>
+</g>
+<!-- N2 -->
+<g id="node3" class="node">
+<title>N2</title>
+<g id="a_node3"><a xlink:href="http://dbpedia.org/resource/Oxford" xlink:title="151584^^xsd:nonNegativeInteger">
+<polygon fill="#ffff00" stroke="#ffff00" points="305.9048,-36 100.6302,-36 100.6302,0 305.9048,0 305.9048,-36"/>
+<text text-anchor="middle" x="203.2675" y="-13.8" font-family="Times,serif" font-size="14.00" fill="#000000">151584^^xsd:nonNegativeInteger</text>
+</a>
+</g>
+</g>
+<!-- N0&#45;&gt;N2 -->
+<g id="edge2" class="edge">
+<title>N0-&gt;N2</title>
+<g id="a_edge2"><a xlink:href="http://dbpedia.org/ontology/populationTotal" xlink:title="dbo:populationTotal">
+<path fill="none" stroke="#000000" d="M203.2675,-88.4006C203.2675,-76.2949 203.2675,-60.2076 203.2675,-46.4674"/>
+<polygon fill="#000000" stroke="#000000" points="206.7676,-46.072 203.2675,-36.072 199.7676,-46.0721 206.7676,-46.072"/>
+</a>
+</g>
+<g id="a_edge2-label"><a xlink:href="http://dbpedia.org/ontology/populationTotal" xlink:title="dbo:populationTotal">
+<text text-anchor="middle" x="260.4302" y="-58.2" font-family="Times,serif" font-size="14.00" fill="#000000">dbo:populationTotal</text>
+</a>
+</g>
+</g>
+<!-- N3 -->
+<g id="node4" class="node">
+<title>N3</title>
+<g id="a_node4"><a xlink:href="http://dbpedia.org/ontology/City" xlink:title="dbo:City">
+<ellipse fill="none" stroke="#000000" cx="369.2675" cy="-18" rx="44.6838" ry="18"/>
+<text text-anchor="middle" x="369.2675" y="-13.8" font-family="Times,serif" font-size="14.00" fill="#000000">dbo:City</text>
+</a>
+</g>
+</g>
+<!-- N0&#45;&gt;N3 -->
+<g id="edge1" class="edge">
+<title>N0-&gt;N3</title>
+<g id="a_edge1"><a xlink:href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" xlink:title="a">
+<path fill="none" stroke="#000000" d="M251.4184,-98.2735C273.8557,-92.8052 300.187,-84.1503 321.2675,-70.8 332.5513,-63.654 342.8442,-53.1623 350.9796,-43.4103"/>
+<polygon fill="#000000" stroke="#000000" points="353.7985,-45.4888 357.2802,-35.4824 348.3183,-41.1335 353.7985,-45.4888"/>
+</a>
+</g>
+<g id="a_edge1-label"><a xlink:href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" xlink:title="a">
+<text text-anchor="middle" x="343.3748" y="-58.2" font-family="Times,serif" font-size="14.00" fill="#000000">a</text>
+</a>
+</g>
+</g>
+</g>
+</svg>
+					</section>
+					<section>
 						e.g. dbr:Oxford dbo:populationTotal "151584"^^xsd:nonNegativeInteger
 						Blank nodes (existence of individual but not named) - example?
 						A RDF triple is a subject predicate object
@@ -213,6 +390,8 @@
 				<section>
 					<section>
 						<h1>The Semantic Web</h1>
+					</section>
+					<section>
 						Semantic Web is an extenation of the WWW in which information is given well defined web as defined by TBL
 						A kind of global database tha contains a network of semantic propositions
 						At the bottom we have the URIs
@@ -230,6 +409,8 @@
 				<section>
 					<section>
 						<h1>Linked Data / The Web of Data</h1>
+					</section>
+					<section>
 						The traditionsal Web is or the web of documents is made up of HTML (representational language), HTTP (communications protocol) and URIs (identification and address)
 						The web of data on the other hand is made up of URI HTTP and RDF
 						The web of data is an upgrade of the web of documenets which "the web of human-readable is being merged.. " (quote from TBL)
