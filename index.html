@@ -42,57 +42,66 @@
 						<h1>Representing knowledge with graphs and triples</h1>
 					</section>
 					<section>
-						What is knowledge?
-						What is Oxford?
-						Let's ask Chat GTP..
-						We need more context?
+						<h2>What is knowledge?</h2>
+						According to the Oxford Dictionary of English..
+						<div class="fragment">
+							<p style="font-style:italic;">"facts, information, and skills acquired through experience or education; the theoretical or practical understanding of a subject"</p>
+						</div>
 					</section>
 					<section>
 						<!-- <img height="500px" src="images/DIKW.png"/> -->
 						<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background -->
-  <rect width="400" height="300" fill="#f8f9fa"/>
+						  <!-- Background -->
+						  <rect width="400" height="300" fill="#f8f9fa"/>
 
-  <!-- Single pyramid with horizontal divisions -->
-  <polygon points="80,250 320,250 200,50" fill="none" stroke="#333" stroke-width="3"/>
+						  <!-- Single pyramid with horizontal divisions -->
+						  <polygon points="80,250 320,250 200,50" fill="none" stroke="#333" stroke-width="3"/>
 
-  <!-- Horizontal dividing lines -->
-  <line x1="110" y1="200" x2="290" y2="200" stroke="#333" stroke-width="2"/>
-  <line x1="140" y1="150" x2="260" y2="150" stroke="#333" stroke-width="2"/>
-  <line x1="170" y1="100" x2="230" y2="100" stroke="#333" stroke-width="2"/>
+						  <!-- Horizontal dividing lines -->
+						  <line x1="110" y1="200" x2="290" y2="200" stroke="#333" stroke-width="2"/>
+						  <line x1="140" y1="150" x2="260" y2="150" stroke="#333" stroke-width="2"/>
+						  <line x1="170" y1="100" x2="230" y2="100" stroke="#333" stroke-width="2"/>
 
-  <!-- Colored sections -->
-  <polygon points="80,250 320,250 290,200 110,200" fill="#e3f2fd" opacity="0.8"/>
-  <polygon points="110,200 290,200 260,150 140,150" fill="#e8f5e8" opacity="0.8"/>
-  <polygon points="140,150 260,150 230,100 170,100" fill="#fff3e0" opacity="0.8"/>
-  <polygon points="170,100 230,100 200,50" fill="#fce4ec" opacity="0.8"/>
+						  <!-- Colored sections -->
+						  <polygon points="80,250 320,250 290,200 110,200" fill="#e3f2fd" opacity="0.8"/>
+						  <polygon points="110,200 290,200 260,150 140,150" fill="#e8f5e8" opacity="0.8"/>
+						  <polygon points="140,150 260,150 230,100 170,100" fill="#fff3e0" opacity="0.8"/>
+						  <polygon points="170,100 230,100 200,50" fill="#fce4ec" opacity="0.8"/>
 
-  <!-- Labels -->
-  <text x="200" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1976d2">DATA</text>
-  <text x="200" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#666">Raw facts and figures</text>
+						  <!-- Labels -->
+						  <text x="200" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1976d2">DATA</text>
+						  <text x="200" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#666">Raw facts and figures</text>
 
-  <text x="200" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#388e3c">INFORMATION</text>
-  <text x="200" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#666">Processed data with context</text>
+						  <text x="200" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#388e3c">INFORMATION</text>
+						  <text x="200" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#666">Processed data with context</text>
 
-  <text x="200" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#f57c00">KNOWLEDGE</text>
-  <text x="200" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#666">Information with experience</text>
+						  <text x="200" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#f57c00">KNOWLEDGE</text>
+						  <text x="200" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#666">Information with experience</text>
 
-  <text x="200" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#c2185b">WISDOM</text>
-  <text x="200" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#666">Knowledge with judgment</text>
+						  <text x="200" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#c2185b">WISDOM</text>
+						  <text x="200" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#666">Knowledge with judgment</text>
 
-  <!-- Title -->
-  <text x="200" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#333">DIKW Pyramid</text>
+						  <!-- Title -->
+						  <text x="200" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#333">DIKW Pyramid</text>
 
-  <!-- Arrows showing progression -->
-  <!-- <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
-    </marker>
-  </defs> -->
+						  <!-- Arrows showing progression -->
+						  <!-- <defs>
+						    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+						      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+						    </marker>
+						  </defs> -->
 
-  <!-- <line x1="50" y1="275" x2="100" y2="275" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <text x="75" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">Processing</text> -->
-</svg>
+						  <!-- <line x1="50" y1="275" x2="100" y2="275" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+						  <text x="75" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">Processing</text> -->
+						</svg>
+					</section>
+					<section>
+						<h2>An example..</h2>
+						<div>What is "Oxford"?</div>
+						<div class="fragment">We need more information..</div>
+						<div class="fragment">Let's ask Chat GTP..</div>
+						<div class="fragment">Let's narrow it down to what is useful to us</div>
+						<div class="fragment">Tell me about the Universty of Oxford</div>
 					</section>
 					<section>
 						Justified true beliefs
@@ -113,26 +122,39 @@
 						Pragmatics is the intention of a message for example "is there any coffee left?"
 						We would interpret this question based on where we are.
 						There is no need for us to say "do you know if there any coffee left in that coffee jug over there?"
-						In a sentence you normally have subject predicate and object.
-						For example:
-						St Edmund Hall -> is in -> Oxford
-						St Edmund Hall -> is part of -> Oxford university
-						Terry Jones -> studied at -> St Edmund Hall
-						subject -> predicate -> object
-						node -> edge -> node = graph
-						We can see that the edge is directed so we have a directed graph
-						We can also see that the edge has a label so this means we have a directed edge-labeled graph
-						Entities: St Edmunds Hall, Oxford, Oxford Univeristy
-						Relations: is in, is part of, studied at
-						Node == Entities
-						Edges == relations
-						Terry Jones -> born in -> 1942
-						Terry Jones -> died in -> 2020
-						These are not entities but literals
-						Terry Jones is a Person
-						Person is not an entity it is a class
-
-
+					</section>
+					<section>
+						<div>In a sentence you normally have subject predicate and object.</div>
+						<div>For example..</div>
+						<div class="fragment" data-fragment-index="1"><span class="fragment highlight-red" data-fragment-index="2">St Edmund Hall</span> <span class="fragment highlight-blue" data-fragment-index="3">is in</span> <span class="fragment highlight-green" data-fragment-index="4">Oxford</span></div>
+						<div class="fragment" data-fragment-index="5"><span class="fragment highlight-red" data-fragment-index="6">St Edmund Hall</span> <span class="fragment highlight-blue" data-fragment-index="7">is part of</span> <span class="fragment highlight-green" data-fragment-index="8">Oxford University</span></div>
+						<div class="fragment" data-fragment-index="9"><span class="fragment highlight-red" data-fragment-index="10">Terry Jones</span> <span class="fragment highlight-blue" data-fragment-index="11">studied at</span> <span class="fragment highlight-green" data-fragment-index="12">St Edmund Hall</span></div>
+					</section>
+					<section>
+						<h2>The graph</h2>
+						<div class="fragment">subject → predicate → object</div>
+						<div><span class="fragment">node → edge → node</span> <span class="fragment">= graph</span></div>
+						<div class="fragment">The edge is directed so we have a <span style="font-style:italic;color:orange;">directed graph</span></div>
+						<div class="fragment">
+							<div>The edge also has a label so we have a</div>
+							<div><span style="font-style:italic;color:orange;">directed edge-labeled graph</span></div>
+						</div>
+					</section>
+					<section>
+						<h2>Entities and relations</h2>
+						<div><span class="fragment">St Edmunds Hall</span><span class="fragment">, Oxford University</span><span class="fragment">, Terry Jones</span></div>
+						<div class="fragment">Nodes are <span style="font-style:italic;color:orange;">entities</span></div>
+						<div><span class="fragment">is in</span><span class="fragment">, is part of</span><span class="fragment">, studied at</span></div>
+						<div class="fragment">Edges are <span style="font-style:italic;color:orange;">relations</span></div>
+					</section>
+					<section>
+						<h2>Literals and classes</h2>
+						<div class="fragment">Terry Jones → born in → <span style="color:yellow;">1942</span></div>
+						<div class="fragment">Oxford → total population → <span style="color:yellow;">151,584</span></div>
+						<div class="fragment">These are not entities but <span style="text-decoration:underline;">literals</span></div>
+						<div class="fragment">Terry Jones → is a → <span style="color:yellow;">Person</span></div>
+						<div class="fragment">Oxford → is a → <span style="color:yellow;">City</span></div>
+						<div class="fragment">These are not entities but <span style="text-decoration:underline;">classes</span></div>
 					</section>
 				</section>
 				<section>
