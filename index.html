@@ -203,39 +203,71 @@
 						<h1>Identifying things with URIs</h1>
 					</section>
 					<section>
-						What is this? Show a photo of an apple.
-						Hopefully they sau "an apple".
-						And then what is this? Show an actual apple.
-						Hopefully they say "an apple".
-						So what is the difference?
-						One is a picture (not an apple) - and yet we also knew it was an apple.
-						This is because humans can understand things by symbols.
-						How do we make a computer understand the difference between things?
-						On the web we do can this with URIs A Uniform Resource Identifier.
-						There are also IRIs which allow more diverse language and characterstics
-						URI = schema / domain/host / path / fragment
-						Normally on the web URIs are documents but how do we talk about apples?
-						URLs = addresses for web documents
-						URL identifies what exists on the web (document)
-						URI identifies on the web what exists (anything)
-						URI for an apple?
-						http://example.org/apple
-						http://example.org/Apfel
-						http://example.org/pomme
-						http://example.org/manzana
-						What about Apple computers?
-						We can have a language independent URI for example:
-						https://www.wikidata.org/entity/Q89 (apple the fruit)
-						https://www.wikidata.org/entity/Q312 (Apple the company)
-						Apple has label en, de, fr, es (diagram)
-						The apple itself cannot be on the web but we can describe the apple
-						This is a designator (the URI) -> designatum (the apple) relationship
-						When I access the URI I might get some representation of the apple, perhaps a web page or
-						HTTP content negotiation allows you to chose the representation you want
-						So you can ask for the content type you want (demo of http://wikidata.org./entity/Q39)
+						<h2>What is this?</h2>
+						<img height="450px" src="images/Apple.jpg"/>
+					</section>
+					<section>
+						<h2>What is the difference?</h2>
+						<div class="fragment">One is a picture <span style="font-style:italic;">and yet</span> we also knew it was an apple</div>
+						<div class="fragment">This is because as humans we understand symbols</div>
+						<div class="fragment">How do we make a computer understand the difference between things?</div>
+					</section>
+					<section>
+						<h2>Semiotic triangle</h2>
+						<img height="450px" src="images/Semiotic_triangle.png"/>
+					</section>
+					<section>
+						<h2>Uniform Resource Identifier</h2>
+						<div>URI = schema / domain/host / path / fragment</div>
+						<div>e.g. http://foo/bar#frag</div>
+						<div>Internationalized Resource Identifier (IRI)</div>
+						<div>https://例.jp/ファイル</div>
+					</section>
+					<section>
+						<h2>Uniform Resource Locator</h2>
+						<div>Addresses for web documents</div>
+						<div>URL identifies what exists on the web (document)</div>
+						<div>URI identifies on the web what exists (anything)</div>
+						<div>So how do we talk about apples on the Web?</div>
+					</section>
+					<section>
+						<h2>URI for an apple?</h2>
+						<div class="fragment">http://example.org/apple</div>
+						<div class="fragment">http://example.org/pomme</div>
+						<div class="fragment">http://example.org/Apfel</div>
+						<div class="fragment">http://example.org/manzana</div>
+					</section>
+					<section>
+						<h2>What about this apple?</h2>
+						<img height="450px" src="images/Apple_logo_white.svg"/>
+					</section>
+					<section>
+						<h2>Language independent URIs</h2>
+						<div class="fragment">Apple <span style="font-style:italic;color:#17ff2e;;">the fruit</span> on Wikidata:</div>
+						<div class="fragment">https://www.wikidata.org/entity/Q89</div>
+						<div class="fragment">Apple <span style="font-style:italic;color:#17ff2e;;">the company</span> on Wikidata:
+						<div class="fragment">https://www.wikidata.org/entity/Q312</div>
+					</section>
+					<section>
+						<img height="450px" src="images/Apple_Wikidata.png"/>
+					</section>
+					<section>
+						<h2>Designator and designatum</h2>
+						<div>The apple itself cannot be on the Web</div>
+						<div>But we can describe the apple on the Web</div>
+						<div>The URI refers to the apple</div>
+						<div>The URI is a designator</div>
+						<div>The apple is the designatum</div>
+					</section>
+					<section>
+						<h2>Content Negotiation</h2>
+						<div>Accessing the URI might return some representation of the apple</div>
+						<div>HTTP content negotiation allows you to chose the representation you want</div>
+						<pre><code data-trim>
 						curl -L -H "Accept: text/html" http://wikidata.org/entity/Q89
 						curl -L -H "Accept: application/json" http://wikidata.org/entity/Q89
 						curl -L -H "Accept: text/turtle" http://wikidata.org/entity/Q89
+						</code></pre>
 					</section>
 				</section>
 				<section>
