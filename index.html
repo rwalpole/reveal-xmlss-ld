@@ -39,22 +39,22 @@
 				</section>
 				<section>
 					<section>
-						<h1>Representing knowledge with graphs and triples</h1>
+						<h2>Representing knowledge with graphs and triples</h2>
 					</section>
 					<section>
-						<h2>What is knowledge?</h2>
+						<h3>What is knowledge?</h3>
 						<div class="fragment">According to the Oxford Dictionary of English..</div>
 						<div class="fragment" style="font-style:italic;color:yellow;">"facts, information, and skills acquired through experience or education; the theoretical or practical understanding of a subject"</div>
 					</section>
 					<section>
-						<h2>What does it mean to understand?</h2>
+						<h3>What does it mean to understand?</h3>
 						<div class="fragment">According to the Oxford Dictionary of English..</div>
 						<div class="fragment" style="font-style:italic;color:yellow;">"perceive the intended meaning of (words, language, or a speaker)"</div>
 					</section>
 					<section>
-						<h2>An example..</h2>
+						<h3>An example..</h3>
 						<div class="fragment">What do you understand by the word "kiwi"?</div>
-						<div class="fragment">Lets ask ChatGPT..<div>
+						<div class="fragment">Lets ask ChatGPT..</div>
 					</section>
 					<section>
 						<img height="600px" src="images/Kiwi_ChatGPT.png"/>
@@ -107,7 +107,7 @@
 						</svg>
 					</section>
 					<section>
-						<h2>DIKW example</h2>
+						<h3>DIKW example</h3>
 						<ul>
 							<li class="fragment"><span style="color:red;">D</span>ata - the word "red"</li>
 							<li class="fragment"><span style="color:red;">I</span>nformation - "a red traffic light"</li>
@@ -116,7 +116,7 @@
 						</ul>
 					</section>
 					<section>
-						<h2>How do we represent knowledge?</h2>
+						<h3>How do we represent knowledge?</h3>
 						<div class="fragment">Let's go back to ChatGPT and add some context..</div>
 						<div class="fragment" style="font-style:italic;color:yellow">"What is a kiwi in the context of fruit?""</div>
 					</section>
@@ -124,7 +124,7 @@
 						<img height="600px" src="images/Kiwi_fruit.png"/>
 					</section>
 					<section>
-						<h2>Semiotic triangle</h2>
+						<h3>Semiotic triangle</h3>
 						<img height="450px" src="images/Semiotic_triangle.png"/>
 					</section>
 					<section>
@@ -136,7 +136,7 @@
 						<div class="fragment">Semantics depends on <span style="font-style:italic;color:orange">context</span> and <span style="font-style:italic;color:orange">pragmatics</span></div>
 					</section>
 					<section>
-						<h2>Context and Pragmatics</h2>
+						<h3>Context and Pragmatics</h3>
 						<div class="fragment">If I say.. <span style="font-style:italic;">"I could use some coffee"</span></div>
 						<div class="fragment">You need to know the <span style="font-style:italic;color:orange;">context</span></div>
 						<div class="fragment">Are we in a supermarket.. <span class="fragment"> or a classroom?</span></div>
@@ -144,7 +144,7 @@
 						<div class="fragment">And deduce that I would like to <span style="font-style:italic;color:#17ff2e;">drink</span> some coffee ☕</div>
 					</section>
 					<section>
-						<h2>The triple</h2>
+						<h3>The triple</h3>
 						<div class="fragment" data-fragment-index="1">A simple sentence has a subject predicate and object.</div>
 						<div class="fragment" data-fragment-index="2">For example..</div>
 						<div class="fragment" data-fragment-index="3"><span class="fragment highlight-red" data-fragment-index="4">St Edmund Hall</span> <span class="fragment highlight-blue" data-fragment-index="5">is part of</span> <span class="fragment highlight-green" data-fragment-index="6">Oxford Univeristy</span></div>
@@ -152,7 +152,7 @@
 						<div class="fragment" data-fragment-index="11"><span class="fragment highlight-red" data-fragment-index="12">Terry Jones</span> <span class="fragment highlight-blue" data-fragment-index="13">studied at</span> <span class="fragment highlight-green" data-fragment-index="14">St Edmund Hall</span></div>
 					</section>
 					<section>
-						<h2>The graph</h2>
+						<h3>The graph</h3>
 						<div class="fragment">subject → predicate → object</div>
 						<div><span class="fragment">node → edge → node</span> <span class="fragment">= graph</span></div>
 						<div class="fragment">The edge is directed so we have a <span style="font-style:italic;color:orange;">directed graph</span></div>
@@ -162,14 +162,14 @@
 						</div>
 					</section>
 					<section>
-						<h2>Entities and relations</h2>
+						<h3>Entities and relations</h3>
 						<div><span class="fragment">St Edmunds Hall</span><span class="fragment">, Oxford University</span><span class="fragment">, Terry Jones</span></div>
 						<div class="fragment">Nodes are <span style="font-style:italic;color:orange;">entities</span></div>
 						<div><span class="fragment">is in</span><span class="fragment">, is part of</span><span class="fragment">, studied at</span></div>
 						<div class="fragment">Edges are <span style="font-style:italic;color:orange;">relations</span></div>
 					</section>
 					<section>
-						<h2>Literals and classes</h2>
+						<h3>Literals and classes</h3>
 						<div class="fragment">Terry Jones → born in → <span style="color:yellow;">1942</span></div>
 						<div class="fragment">Oxford → total population → <span style="color:yellow;">151,584</span></div>
 						<div class="fragment">These are not entities but <span style="text-decoration:underline;">literals</span></div>
@@ -180,14 +180,14 @@
 				</section>
 				<section>
 					<section>
-						<h1>Knowledge Graphs</h1>
+						<h2>Knowledge Graphs</h2>
 					</section>
 					<section>
-						<h2>Information in a graph</h2>
+						<h3>Information in a graph</h3>
 						<img height="450px" src="images/Knowledge_Graph.png"/>
 					</section>
 					<section>
-						<h2>What is a knowledge graph?</h2>
+						<h3>What is a knowledge graph?</h3>
 						<div>
 							“A knowledge graph (i) mainly describes real world entities and their interrelations, organized
 in a graph, (ii) defines possible classes and relations of entities in a schema, (iii) allows for
@@ -222,59 +222,59 @@ domains.”
 				</section>
 				<section>
 					<section>
-						<h1>Identifying things with URIs</h1>
+						<h2>Identifying things with URIs</h2>
 					</section>
 					<section>
 						<h2>What is this?</h2>
 						<img height="450px" src="images/Apple.jpg"/>
 					</section>
 					<section>
-						<h2>What is the difference?</h2>
+						<h3>What is the difference?</h3>
 						<div class="fragment">One is a picture <span style="font-style:italic;">and yet</span> we also knew it was an apple</div>
 						<div class="fragment">This is because as humans we understand symbols</div>
 						<div class="fragment">How do we make a computer understand the difference between things?</div>
 					</section>
 					<section>
-						<h2>Semiotic triangle</h2>
+						<h3>Semiotic triangle</h3>
 						<img height="450px" src="images/Semiotic_triangle.png"/>
 					</section>
 					<section>
-						<h2>Uniform Resource Identifier</h2>
+						<h3>Uniform Resource Identifier</h3>
 						<div>URI = schema / domain/host / path / fragment</div>
 						<div>e.g. http://foo/bar#frag</div>
 						<div>Internationalized Resource Identifier (IRI)</div>
 						<div>https://例.jp/ファイル</div>
 					</section>
 					<section>
-						<h2>Uniform Resource Locator</h2>
+						<h3>Uniform Resource Locator</h3>
 						<div>Addresses for web documents</div>
 						<div>URL identifies what exists on the web (document)</div>
 						<div>URI identifies on the web what exists (anything)</div>
 						<div>So how do we talk about apples on the Web?</div>
 					</section>
 					<section>
-						<h2>URI for an apple?</h2>
+						<h3>URI for an apple?</h3>
 						<div class="fragment">http://example.org/apple</div>
 						<div class="fragment">http://example.org/pomme</div>
 						<div class="fragment">http://example.org/Apfel</div>
 						<div class="fragment">http://example.org/manzana</div>
 					</section>
 					<section>
-						<h2>What about this apple?</h2>
+						<h3>What about this apple?</h3>
 						<img height="450px" src="images/Apple_logo_white.svg"/>
 					</section>
 					<section>
 						<h2>Language independent URIs</h2>
 						<div class="fragment">Apple <span style="font-style:italic;color:#17ff2e;;">the fruit</span> on Wikidata:</div>
 						<div class="fragment">https://www.wikidata.org/entity/Q89</div>
-						<div class="fragment">Apple <span style="font-style:italic;color:#17ff2e;;">the company</span> on Wikidata:
+						<div class="fragment">Apple <span style="font-style:italic;color:#17ff2e;;">the company</span> on Wikidata:</div>
 						<div class="fragment">https://www.wikidata.org/entity/Q312</div>
 					</section>
 					<section>
 						<img height="450px" src="images/Apple_Wikidata.png"/>
 					</section>
 					<section>
-						<h2>Designator and designatum</h2>
+						<h3>Designator and designatum</h3>
 						<div>The apple itself cannot be on the Web</div>
 						<div>But we can describe the apple on the Web</div>
 						<div>The URI refers to the apple</div>
@@ -282,7 +282,7 @@ domains.”
 						<div>The apple is the designatum</div>
 					</section>
 					<section>
-						<h2>Content Negotiation</h2>
+						<h3>Content Negotiation</h3>
 						<div>Accessing the URI might return some representation of the apple</div>
 						<div>HTTP content negotiation allows you to chose the representation you want</div>
 						<pre><code data-trim>
@@ -294,25 +294,98 @@ domains.”
 				</section>
 				<section>
 					<section>
-						<h1>Representing graphs and triples with RDF</h1>
+						<h2>Representing graphs and triples with RDF</h2>
 					</section>
 					<section>
 						We already know how to represent facts with
 
-						subject -> predicate -> object
+						subject → predicate → object
 
 						statements such as
 
-						St Edmund Hall -- is part of --> Oxford University
+						St Edmund Hall → is part of → Oxford University
 					</section>
 					<section>
-						If we want to express this in RDF we need to use URIs
-						Subject(URI) -> Property (URI) -> Object/Value (URI/Literal)
-						e.g. dbr:University_of_Oxford dbo:location dbr:Oxford
+						<div class="fragment" data-fragment-index="1">If we want to express this in RDF we need to use URIs</div>
+						<div class="fragment" data-fragment-index="2">Subject(URI) → Property (URI) → Object/Value (URI/Literal)</div>
+						<div class="fragment" data-fragment-index="3">
+							<div class="fragment highlight-red" data-fragment-index="4">http://dbpedia.org/resource/University_of_Oxford</div>
+							<div class="fragment highlight-green" data-fragment-index="5">http://dbpedia.org/resource/location</div>
+							<div class="fragment highlight-blue" data-fragment-index="6">http://dbpedia.org/resource/Oxford</div>
+						</div>
 					</section>
 					<section>
-						<svg width="512pt" height="113pt"
-							 viewBox="0.00 0.00 511.57 113.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<h3>Serialization formats</h3>
+						<ul>
+							<li>N-triples (hard to read)</li>
+							<li>RDF/XML (hard to read)</li>
+							<li>N-Quads</li>
+							<li>RDFa</li>
+							<li>JSON-LD</li>
+							<li>Notation3</li>
+							<li>HDT</li>
+							<li>HexTuples</li>
+							<li>Turtle (abbreviated form or N-triples) - nice to read we will use this</li>
+						</ul>
+					</section>
+					<section>
+						<h3>N-Triples with URIs</h3>
+						<pre><code data-trim>
+						&lt;http://dbpedia.org/resource/St_Edmund_Hall,_Oxford&gt;
+						&lt;http://dbpedia.org/ontology/isPartOf&gt;
+						&lt;http://dbpedia.org/resource/University_of_Oxford&gt; .
+						</code></pre>
+					</section>
+					<section>
+						<h3>N-Triples with URIs and Literal</h3>
+						<pre><code data-trim>
+						&lt;http://dbpedia.org/resource/St_Edmund_Hall&gt;
+						&lt;http://dbpedia.org/ontology/isPartOf&gt;
+						&lt;http://dbpedia.org/resource/University_of_Oxford&gt; .
+						&lt;http://dbpedia.org/resource/St_Edmund_Hall,_Oxford&gt;
+						&lt;http://www.w3.org/2000/01/rdf-schema#label&gt;
+						"St_Edmund_Hall"^^&lt;http://www.w3.org/2001/XMLSchema#string&gt;  .
+						</code></pre>
+					</section>
+					<section>
+						<h3>Turtle using prefixes</h3>
+						<pre><code data-trim>
+							@prefix dbo: &lt;http://dbpedia.org/ontology/&gt; .
+							@prefix dbr: &lt;http://dbpedia.org/resource/&gt; .
+							@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+							@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+							dbr:St_Edmund_Hall dbo:isPartOf dbr:University_of_Oxford .
+							dbr:St_Edmund_Hall rdfs:label "St Edmund Hall"^^xsd:string  .
+						</code></pre>
+					</section>
+					<section>
+						<h3>Turtle using predicate list</h3>
+						<pre><code data-trim>
+							@prefix dbo: &lt;http://dbpedia.org/ontology/&gt; .
+							@prefix dbr: &lt;http://dbpedia.org/resource/&gt; .
+							@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+							@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+							dbr:St_Edmund_Hall dbo:isPartOf dbr:University_of_Oxford ;
+																 rdfs:label "St Edmund Hall"xsd:string  .
+						</code></pre>
+					</section>
+					<section>
+						<h3>Turtle using object list</h3>
+						<pre><code data-trim>
+							@prefix dbo: &lt;http://dbpedia.org/ontology/&gt; .
+							@prefix dbr: &lt;http://dbpedia.org/resource/&gt; .
+							@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+							@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+							dbr:St_Edmund_Hall dbo:isPartOf dbr:University_of_Oxford ;
+																 rdfs:label "St Edmund Hall"@en  ,
+																 "Salle Saint-Edmond"@fr .
+						</code></pre>
+					</section>
+					<section>
+						<svg viewBox="0.00 0.00 511.57 113.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 							<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 109)">
 							<title>%3</title>
 							<polygon fill="white" stroke="transparent" points="-4,4 -4,-109 507.57,-109 507.57,4 -4,4"/>
@@ -347,7 +420,7 @@ domains.”
 						XML schema types xsd:string, xsd:integer, xsd:nonNegativeInteger
 					</section>
 					<section>
-						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="422pt" height="133pt" viewBox="0.00 0.00 422.11 132.80">
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0.00 0.00 422.11 132.80">
 							<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 128.8)">
 							<title>%0</title>
 							<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-128.8 418.1091,-128.8 418.1091,4 -4,4"/>
@@ -438,22 +511,9 @@ domains.”
 						Object can be a blank node, IRI or literals
 						An RDF graph is a set of RDF triples
 					</section>
+
 					<section>
-						<h2>Serialization formats</h2>
-						<ul>
-							<li>N-triples (hard to read)</li>
-							<li>RDF/XML (hard to read)</li>
-							<li>N-Quads</li>
-							<li>RDFa</li>
-							<li>JSON-LD</li>
-							<li>Notation3</li>
-							<li>HDT</li>
-							<li>HexTuples</li>
-							<li>Turtle (abbreviated form or N-triples) - nice to read we will use this</li>
-						</ul>
-					</section>
-					<section>
-							<h2>N-Triples to Turtle example</h2>
+							<h3>N-Triples to Turtle example</h3>
 
 						Triples end with a .
 						Subject can be continued with ;
@@ -492,7 +552,7 @@ domains.”
 				</section>
 				<section>
 					<section>
-						<h1>The Semantic Web</h1>
+						<h2>The Semantic Web</h2>
 					</section>
 					<section>
 						Semantic Web is an extenation of the WWW in which information is given well defined web as defined by TBL
@@ -506,27 +566,57 @@ domains.”
 						Meaning is made Explicit
 						information can be processed automatically
 						data can be integrata
-						</table>
 					</section>
 				</section>
 				<section>
 					<section>
-						<h1>Linked Data / The Web of Data</h1>
+						<h2>Linked Data / The Web of Data</h2>
 					</section>
 					<section>
-						The traditionsal Web is or the web of documents is made up of HTML (representational language), HTTP (communications protocol) and URIs (identification and address)
-						The web of data on the other hand is made up of URI HTTP and RDF
-						The web of data is an upgrade of the web of documenets which "the web of human-readable is being merged.. " (quote from TBL)
-						How do we access the Web of Data?
-						You need a service
-						https://lod-cloud.net/#
-						Show the history of how the size has changed
-						Traditionally data on the web was accessed via APIs but you had to know the schema and if something changed it would break your application
-						There are differetnt APIs for different services. This creates data islands.
-						Encoding the data as RDF means you have a generic interface with access over http
+						<h3>What is the Web of Data?</h3>
+						<p style="font-style:italic;">"The web of human-readable document is being merged with a web of machine understandable data. The potential of the mixture of humans and machines working together and communication through the web could be immense."</p>
+						<div style="font-size:0.75em;">
+							<div>Sir Tim Berners-Lee, May 1998</div>
+							<div><a href="https://www.w3.org/People/Berners-Lee/ShortHistory.html">https://www.w3.org/People/Berners-Lee/ShortHistory.html</a></div>
+						</div>
 					</section>
 					<section>
-						<h2>Linked Data Principles</h2>
+						<h3>Basic Architecture of the Web of Documents</h3>
+						<div>
+							<img style="float:left;margin-right: 15px;" height="400px" src="images/Traditional_Web.png"/>
+							<ol style="padding-top:15px;">
+								<li>Address (URL)</li>
+								<li>Communication (HTTP)</li>
+								<li>Representation (HTML)</li>
+							</ol>
+						</div>
+					</section>
+					<section>
+						<h3>Basic Architecture of the Web of Data: URI</h3>
+						<img height="450px" src="images/Web_of_Data_1.png"/>
+					</section>
+					<section>
+						<h3>Basic Architecture of the Web of Data: HTTP</h3>
+						<img height="450px" src="images/Web_of_Data_2.png"/>
+					</section>
+					<section>
+						<h3>Basic Architecture of the Web of Data: RDF</h3>
+						<img height="450px" src="images/Web_of_Data_3.png"/>
+					</section>
+					<section>
+						<h3>How do we access the Web of Data?</h3>
+						<div class="fragment">Traditionally access to data on the Web via APIs</div>
+						<div class="fragment">..but schema changes can break your application</div>
+						<div class="fragment">Different APIs for different services means data silos</div>
+						<div class="fragment">Encoding as RDF means a generic interface with access over http</div>
+					</section>
+					<section>
+						<h3>How do we find data on the Web of Data?</h3>
+						<div>You need a service</div>
+						<div>This is a good place to start: <a href="https://lod-cloud.net/#">https://lod-cloud.net/#</a></div>
+					</section>
+					<section>
+						<h3>Linked Data Principles</h3>
 						<ol>
 							<li >Use URIs as names for things.</li>
 							<li class="fragment">Use HTTP URIs so that people can look up those names.</li>
@@ -539,7 +629,7 @@ domains.”
 						</div>
 					</section>
 					<section>
-						<h2>5 star linked open data</h2>
+						<h3>5 star linked open data</h3>
 						<ol>
 							<li class="fragment">⭐ Available on the web (whatever format) but with an open licence, to be Open Data</li>
 							<li class="fragment">⭐ Available as machine-readable structured data (e.g. excel instead of image scan of a table)</li>
@@ -549,7 +639,7 @@ domains.”
 						</ol>
 					</section>
 					<section>
-						<h2>FAIR Principles</h2>
+						<h3>FAIR Principles</h3>
 						<div>In 2016, the <span style="color:#1b91ff;">FAIR Guiding Principles for scientific data management and stewardship</span> were published in the Scientific Data journal.</div>
 						<ul>
 							<li class="fragment"><span style="color:red;">F</span>indable</li>
@@ -559,7 +649,7 @@ domains.”
 						</ul>
 					</section>
 					<section>
-						<h2>FAIR Principles</h2>
+						<h3>FAIR Principles</h3>
 						<p style="font-style:italic;">The principles emphasise machine actionability ... because humans increasingly rely on computational support to deal with data as a result of the increase in volume, complexity, and creation speed of data.</p>
 						<p><a href="https://www.go-fair.org/fair-principles/">https://www.go-fair.org/fair-principles/</a>
 					</section>
