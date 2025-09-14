@@ -145,7 +145,7 @@
 					</section>
 					<section>
 						<h3>The triple</h3>
-						<div class="fragment" data-fragment-index="1">A simple sentence has a subject predicate and object.</div>
+						<div class="fragment" data-fragment-index="1">A simple sentence has a subject, predicate and object.</div>
 						<div class="fragment" data-fragment-index="2">For example..</div>
 						<div class="fragment" data-fragment-index="3"><span class="fragment highlight-red" data-fragment-index="4">St Edmund Hall</span> <span class="fragment highlight-blue" data-fragment-index="5">is part of</span> <span class="fragment highlight-green" data-fragment-index="6">Oxford Univeristy</span></div>
 						<div class="fragment" data-fragment-index="7"><span class="fragment highlight-red" data-fragment-index="8">Oxford University</span> <span class="fragment highlight-blue" data-fragment-index="9">is in</span> <span class="fragment highlight-green" data-fragment-index="10">Oxford</span></div>
@@ -197,6 +197,10 @@ domains.”
 <div style="font-size:0.75em;">Heiko Paulheim (2017)</div>
 					</section>
 					<section>
+						<h3>Information in a graph</h3>
+						<img height="450px" src="images/Knowledge_Graph.png"/>
+					</section>
+					<section>
 						<h3>Machine understanding</h3>
 						<div class="fragment">Computer just sees text (or binary representations)</div>
 						<div class="fragment">Understanding has to be encoded in software</div>
@@ -204,22 +208,14 @@ domains.”
 						<div class="fragment">We have to re-write our software</div>
 					</section>
 					<section>
-						<h3>Machines are good at mathematics</h3>
-						<div>What if we used mathematics to help the computer understand?</div>
-						<div>Mathematical Logic provides a framework
-						Show a larger graph
-						Computer still does not understand the meaning
-						Understanding has to be intrepetted by software by someone who can read the labels
-						But things can change and then the software won't understand anymore
-						Implicit vs Explicit Knowledge
-						A knowledge graph generally describes real world entities and their relations, organized in a graph
-						Defines classes and relations in a schema (explicit knowledge relations)
-						Allows for potentially interrelating arbitary Entities
-						Covers various topical domains
-						Representing information as a graph is not new and has been used for a long time
-						To avoid having to encode meaning into software we need an explicit knowledge Representation so that we have a representaion that can be "understood" by the computer without a human having to write specific code
-						For this we have ontoglogies we are based on mathematical logic - this can then be used by a general inference engine or reasoner and there is no need to write specific code anymore
-						Increasingly this understand can also be used by LLMs
+						<h3>Explicit & Implicit Knowledge</h3>
+						<div class="fragment">We use ontologies to encode <span style="font-style:italic;color:orange;">explicit</span> knowledge</div>
+						<div class="fragment">Ontologies are based on mathematical logic</div>
+						<div class="fragment">Meaning they can be "understood" by the computer</div>
+						<div class="fragment">Reasoning can uncover <span style="font-style:italic;color:orange;">implicit</span> knowledge</div>
+					</section>
+					<section>
+						<img height="450px" src="images/Classes.png"/>
 					</section>
 				</section>
 				<section>
@@ -306,25 +302,46 @@ domains.”
 					</section>
 					<section>
 						<div class="fragment" data-fragment-index="1">If we want to express this in RDF we need to use URIs</div>
-						<div class="fragment" data-fragment-index="2">Subject(URI) → Property (URI) → Object/Value (URI/Literal)</div>
-						<div class="fragment" data-fragment-index="3">
-							<div class="fragment highlight-red" data-fragment-index="4">http://dbpedia.org/resource/University_of_Oxford</div>
-							<div class="fragment highlight-green" data-fragment-index="5">http://dbpedia.org/resource/location</div>
-							<div class="fragment highlight-blue" data-fragment-index="6">http://dbpedia.org/resource/Oxford</div>
+						<div class="fragment" data-fragment-index="2">In RDF the predicate is known as a <span style="font-style:italic;">Property</span></div>
+						<div class="fragment" data-fragment-index="3">Subject(URI) → Property (URI) → Object/Value (URI/Literal)</div>
+						<div class="fragment" data-fragment-index="4">
+							<div class="fragment highlight-red" data-fragment-index="5">&lt;http://dbpedia.org/resource/University_of_Oxford&gt;</div>
+							<div class="fragment highlight-green" data-fragment-index="6">&lt;http://dbpedia.org/resource/location&gt;</div>
+							<div class="fragment highlight-blue" data-fragment-index="7">&lthttp://dbpedia.org/resource/Oxford&gt;</div>
 						</div>
+					</section>
+					<section>
+						<h3>XML Schema datatypes</h3>
+						<div>Can be used to express typed literals</div>
+						<div>These are in the XML Schema namespace</div>
+						<div>http://www.w3.org/2001/XMLSchema#</div>
+						<pre><code data-trim>
+							"Oxford"^^&lt;http://www.w3.org/2001/XMLSchema#string&gt;
+							"2025-09-14"^^&lt;http://www.w3.org/2001/XMLSchema#date&gt;
+							"true"^^&lt;http://www.w3.org/2001/XMLSchema#booolean&gt;
+							"42"^^&lt;http://www.w3.org/2001/XMLSchema#integer&gt;
+						</code></pre>
+					</section>
+					<section>
+						<h3>Language</h3>
+						<div>Language Tags denote the (natural) language of text</div>
+						<pre><code data-trim>
+							"University of Oxford"@en
+							"Universität Oxford"@de
+							"Universidad de Oxford"@es
+						</code></pre>
 					</section>
 					<section>
 						<h3>Serialization formats</h3>
 						<ul>
-							<li>N-triples (hard to read)</li>
-							<li>RDF/XML (hard to read)</li>
-							<li>N-Quads</li>
-							<li>RDFa</li>
-							<li>JSON-LD</li>
-							<li>Notation3</li>
-							<li>HDT</li>
-							<li>HexTuples</li>
-							<li>Turtle (abbreviated form or N-triples) - nice to read we will use this</li>
+							<li class="fragment">N-triples (hard to read)</li>
+							<li class="fragment">RDF/XML (hard to read)</li>
+							<li class="fragment">Turtle Terse RDF Triple Language (easier to read)</li>
+							<li class="fragment">N-Quads</li>
+							<li class="fragment">RDFa</li>
+							<li class="fragment">JSON-LD</li>
+							<li class="fragment">Notation3</li>
+							<li class="fragment">HDT (binary)</li>
 						</ul>
 					</section>
 					<section>
@@ -384,169 +401,58 @@ domains.”
 						</code></pre>
 					</section>
 					<section>
-						<svg viewBox="0.00 0.00 511.57 113.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-							<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 109)">
-							<title>%3</title>
-							<polygon fill="white" stroke="transparent" points="-4,4 -4,-109 507.57,-109 507.57,4 -4,4"/>
-							<text text-anchor="middle" x="251.78" y="-37.8" font-family="Times,serif" font-size="14.00">Namespaces:</text>
-							<text text-anchor="middle" x="251.78" y="-22.8" font-family="Times,serif" font-size="14.00">dbo: http://dbpedia.org/ontology/</text>
-							<text text-anchor="middle" x="251.78" y="-7.8" font-family="Times,serif" font-size="14.00">dbr: http://dbpedia.org/resource/</text>
-							<!-- Rdbr:University_of_Oxford -->
-							<g id="node1" class="node">
-							<title>Rdbr:University_of_Oxford</title>
-							<ellipse fill="none" stroke="blue" cx="128.04" cy="-87" rx="128.08" ry="18"/>
-							<text text-anchor="middle" x="128.04" y="-83.3" font-family="Times,serif" font-size="14.00">dbr:University_of_Oxford</text>
-							</g>
-							<!-- Rdbr:Oxford -->
-							<g id="node2" class="node">
-							<title>Rdbr:Oxford</title>
-							<ellipse fill="none" stroke="blue" cx="441.82" cy="-87" rx="61.99" ry="18"/>
-							<text text-anchor="middle" x="441.82" y="-83.3" font-family="Times,serif" font-size="14.00">dbr:Oxford</text>
-							</g>
-							<!-- Rdbr:University_of_Oxford&#45;&gt;Rdbr:Oxford -->
-							<g id="edge1" class="edge">
-							<title>Rdbr:University_of_Oxford&#45;&gt;Rdbr:Oxford</title>
-							<path fill="none" stroke="black" d="M256.3,-87C295.06,-87 336.27,-87 369.88,-87"/>
-							<polygon fill="black" stroke="black" points="370.06,-90.5 380.06,-87 370.06,-83.5 370.06,-90.5"/>
-							<text text-anchor="middle" x="318.08" y="-90.8" font-family="Times,serif" font-size="14.00">dbo:location</text>
-							</g>
-							</g>
-						</svg>
+						<h3>RDF Schema</h3>
+						<div>A data modelling vocabulary for RDF</div>
+						<div>Allows you to define classes, properties and instances</div>
+						<div>Instances are indivual members of a class</div>
 					</section>
 					<section>
-						In RDF the predicate is known as a Property
-						** show Oxford as a graph with type and population ** (use https://www.w3.org/RDF/Validator/)
-						XML schema types xsd:string, xsd:integer, xsd:nonNegativeInteger
+						<h3>Defining classes and instances</h3>
+						<pre><code data-trim>
+							@prefix dbo: &lt;http://dbpedia.org/ontology/&gt; .
+							@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+
+							dbo:University rdf:type rdf:Class .
+							dbo:University rdfs:subClassOf dbo:EducationalInstitution .
+							dbr:University_of_Oxford rdf:type dbo:University .
+						</code></pre>
 					</section>
 					<section>
-						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0.00 0.00 422.11 132.80">
-							<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 128.8)">
-							<title>%0</title>
-							<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-128.8 418.1091,-128.8 418.1091,4 -4,4"/>
-							<!-- N0 -->
-							<g id="node1" class="node">
-							<title>N0</title>
-							<g id="a_node1"><a xlink:href="http://dbpedia.org/resource/Oxford" xlink:title="dbr:Oxford">
-							<ellipse fill="none" stroke="#000000" cx="203.2675" cy="-106.8" rx="54.4566" ry="18"/>
-							<text text-anchor="middle" x="203.2675" y="-102.6" font-family="Times,serif" font-size="14.00" fill="#000000">dbr:Oxford</text>
-							</a>
-							</g>
-							</g>
-							<!-- N1 -->
-							<g id="node2" class="node">
-							<title>N1</title>
-							<g id="a_node2"><a xlink:href="http://dbpedia.org/resource/Oxford" xlink:title="Oxford@en">
-							<polygon fill="#ffff00" stroke="#ffff00" points="82.3038,-36 .2312,-36 .2312,0 82.3038,0 82.3038,-36"/>
-							<text text-anchor="middle" x="41.2675" y="-13.8" font-family="Times,serif" font-size="14.00" fill="#000000">Oxford@en</text>
-							</a>
-							</g>
-							</g>
-							<!-- N0&#45;&gt;N1 -->
-							<g id="edge3" class="edge">
-							<title>N0-&gt;N1</title>
-							<g id="a_edge3"><a xlink:href="http://www.w3.org/2000/01/rdf-schema#label" xlink:title="rdfs:label">
-							<path fill="none" stroke="#000000" d="M175.0493,-91.3322C149.6913,-77.4323 112.1093,-56.8318 83.2292,-41.0012"/>
-							<polygon fill="#000000" stroke="#000000" points="84.6362,-37.7812 74.1848,-36.0436 81.2715,-43.9195 84.6362,-37.7812"/>
-							</a>
-							</g>
-							<g id="a_edge3-label"><a xlink:href="http://www.w3.org/2000/01/rdf-schema#label" xlink:title="rdfs:label">
-							<text text-anchor="middle" x="163.7009" y="-58.2" font-family="Times,serif" font-size="14.00" fill="#000000">rdfs:label</text>
-							</a>
-							</g>
-							</g>
-							<!-- N2 -->
-							<g id="node3" class="node">
-							<title>N2</title>
-							<g id="a_node3"><a xlink:href="http://dbpedia.org/resource/Oxford" xlink:title="151584^^xsd:nonNegativeInteger">
-							<polygon fill="#ffff00" stroke="#ffff00" points="305.9048,-36 100.6302,-36 100.6302,0 305.9048,0 305.9048,-36"/>
-							<text text-anchor="middle" x="203.2675" y="-13.8" font-family="Times,serif" font-size="14.00" fill="#000000">151584^^xsd:nonNegativeInteger</text>
-							</a>
-							</g>
-							</g>
-							<!-- N0&#45;&gt;N2 -->
-							<g id="edge2" class="edge">
-							<title>N0-&gt;N2</title>
-							<g id="a_edge2"><a xlink:href="http://dbpedia.org/ontology/populationTotal" xlink:title="dbo:populationTotal">
-							<path fill="none" stroke="#000000" d="M203.2675,-88.4006C203.2675,-76.2949 203.2675,-60.2076 203.2675,-46.4674"/>
-							<polygon fill="#000000" stroke="#000000" points="206.7676,-46.072 203.2675,-36.072 199.7676,-46.0721 206.7676,-46.072"/>
-							</a>
-							</g>
-							<g id="a_edge2-label"><a xlink:href="http://dbpedia.org/ontology/populationTotal" xlink:title="dbo:populationTotal">
-							<text text-anchor="middle" x="260.4302" y="-58.2" font-family="Times,serif" font-size="14.00" fill="#000000">dbo:populationTotal</text>
-							</a>
-							</g>
-							</g>
-							<!-- N3 -->
-							<g id="node4" class="node">
-							<title>N3</title>
-							<g id="a_node4"><a xlink:href="http://dbpedia.org/ontology/City" xlink:title="dbo:City">
-							<ellipse fill="none" stroke="#000000" cx="369.2675" cy="-18" rx="44.6838" ry="18"/>
-							<text text-anchor="middle" x="369.2675" y="-13.8" font-family="Times,serif" font-size="14.00" fill="#000000">dbo:City</text>
-							</a>
-							</g>
-							</g>
-							<!-- N0&#45;&gt;N3 -->
-							<g id="edge1" class="edge">
-							<title>N0-&gt;N3</title>
-							<g id="a_edge1"><a xlink:href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" xlink:title="a">
-							<path fill="none" stroke="#000000" d="M251.4184,-98.2735C273.8557,-92.8052 300.187,-84.1503 321.2675,-70.8 332.5513,-63.654 342.8442,-53.1623 350.9796,-43.4103"/>
-							<polygon fill="#000000" stroke="#000000" points="353.7985,-45.4888 357.2802,-35.4824 348.3183,-41.1335 353.7985,-45.4888"/>
-							</a>
-							</g>
-							<g id="a_edge1-label"><a xlink:href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" xlink:title="a">
-							<text text-anchor="middle" x="343.3748" y="-58.2" font-family="Times,serif" font-size="14.00" fill="#000000">a</text>
-							</a>
-							</g>
-							</g>
-							</g>
-						</svg>
+						<h3>Defining properties</h3>
+						<pre><code data-trim>
+							@prefix dbo: &lt;http://dbpedia.org/ontology/&gt; .
+							@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+
+							dbo:district rdf:type rdf:Property ;
+							             rdfs:domain dbo:Place ;
+													 rdfs:label "district"@en ;
+													 rdfs:range dbo:PopulatedPlace
+													 rdfs:subPropertyOf dbo:isPartOf .
+						</code></pre>
 					</section>
 					<section>
-						e.g. dbr:Oxford dbo:populationTotal "151584"^^xsd:nonNegativeInteger
-						Blank nodes (existence of individual but not named) - example?
-						A RDF triple is a subject predicate object
-						Subject can be a Blank node or a IRI
-						Predicate is an IRI
-						Object can be a blank node, IRI or literals
-						An RDF graph is a set of RDF triples
+						<h3>Other things to note</h3>
+						<ul>
+							<li class="fragment">Classes start with uppercase</li>
+							<li class="fragment">Properties start with lowercase</li>
+							<li class="fragment">rdf:type can be abbreviate as 'a'</li>
+						</ul>
+						<pre class="fragment"><code data-trim>
+							@prefix dbo: &lt;http://dbpedia.org/ontology/&gt; .
+							@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+
+							dbo:University a rdf:Class .
+							dbo:University rdfs:subClassOf dbo:EducationalInstitution .
+							dbr:University_of_Oxford a dbo:University .
+						</code></pre>
 					</section>
-
 					<section>
-							<h3>N-Triples to Turtle example</h3>
-
-						Triples end with a .
-						Subject can be continued with ;
-						Terry Jones almaMater St Edmunds College;
-												directed Monty Python and the Holy Grail
-						predicate can be continued with ,
-						Terry Jones directed Monty Python and the Holy Grail, Life of Brian, Meaning of Life
-
-						Declare prefixes (syntatic sugar)
-						Use @base &lt;Oxford&gt;
-						N-ary relations
-						Terry Jones directed film/date
-						[] as subject (anonymous)
-						[...] as object (nested anonymous blank nodes)
-						Derefernceable blank nodes e.g. _:ID1 ?p ?o
-
-						RDF Schema
-						A high level vocabulary that allows us to define vocabularies
-						Classes properties and instances
-						Instances are indivual members of a class and can be instances of other classes
-						If I want to describe a schema in RDF I need to use RDFS
-						If I want to say something is a class I use rdf:type rdfs:Class
-						If I want to say something is an instance I use rdf:type
-						Properties are all instances of rdf:Property (not rdfs:Property)
-						We can also definte rdfs:domain and rdfs:range
-						Everything is a an rdfs:Resource
-						rdfs:subClassOf
-						rdfs:label
-						rdfs:seeAlso
-						rdfs:isDefinedBy
-						rdfs:comment
-						Example schema (class, property and instance definitions)
-						Datatses that agree on vocabularies are more easily integrated - they speak the same Language
-						Class is always uppercase, properties are always lower case
+						<h3>Other RDF Features</h3>
+						<ul>
+							<li class="fragment">Blank nodes (bnode) - anonymous resources</li>
+							<li class="fragment">Collections and containers (Bag, Sequence, List)</li>
+							<li class="fragment">Reification - making statements about statements</li>
+						</ul>
 					</section>
 				</section>
 				<section>
@@ -561,19 +467,16 @@ domains.”
 						</div>
 					</section>
 					<section>
-						A kind of global database tha contains a network of semantic propositions
-						At the bottom we have the URIs
-						RDF allows us to encode triples
-						OWL RDFS SKOS provide ways of modelling (also encoded in RDF)
-						SPARQL can be used to query RDF based somewhat on SQL
-						Demo of a SPARQL endpoint (DBpedia, Wikidata)
-						Meaning is made Explicit
-						information can be processed automatically
-						data can be integrata
-					</section>
-					<section>
 						<h3>Semantic Web Technology Stack</h3>
 						<img height="450px" src="images/Semantic_Web_layer_cake.png"/>
+					</section>
+					<section>
+						<h3>The Semantic Web</h3>
+						<div class="fragment">The Semantic Web is based on the web</div>
+						<div class="fragment">Standardised information exchange is key</div>
+						<div class="fragment">Querying (SPARQL) allows fine-grained data access</div>
+						<div class="fragment">Many of the technologies are W3C recommendations</div>
+						<div class="fragment">The Semantic Web is part of the <span style="font-style:italic;color:orange;">Web of Data</span></div>
 					</section>
 				</section>
 				<section>
@@ -616,11 +519,10 @@ domains.”
 						<div class="fragment">Traditionally access to data on the Web via APIs</div>
 						<div class="fragment">..but schema changes can break your application</div>
 						<div class="fragment">Different APIs for different services means data silos</div>
-						<div class="fragment">Encoding as RDF means a generic interface with access over http</div>
+						<div class="fragment">Encoding as RDF means a generic interface with access over HTTP</div>
 					</section>
 					<section>
 						<h3>How do we find data on the Web of Data?</h3>
-						<div>You need a service</div>
 						<div>This is a good place to start: <a href="https://lod-cloud.net/#">https://lod-cloud.net/#</a></div>
 					</section>
 					<section>
@@ -660,6 +562,22 @@ domains.”
 						<h3>FAIR Principles</h3>
 						<p style="font-style:italic;">The principles emphasise machine actionability ... because humans increasingly rely on computational support to deal with data as a result of the increase in volume, complexity, and creation speed of data.</p>
 						<p><a href="https://www.go-fair.org/fair-principles/">https://www.go-fair.org/fair-principles/</a>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Recap...</h2>
+						<ul>
+							<li class="fragment" data-fragment-index="1">Representing knowledge with graphs and triples</li>
+							<li class="fragment" data-fragment-index="2">Knowledge Graphs</li>
+							<li class="fragment" data-fragment-index="3">Identifying things with URIs</li>
+							<li class="fragment" data-fragment-index="4">Representing graphs and triples with RDF</li>
+							<li class="fragment" data-fragment-index="5">The Semantic Web</li>
+							<li class="fragment" data-fragment-index="6">Linked Data / The Web of Data</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Questions..?</h3>
 					</section>
 				</section>
 			</div>
