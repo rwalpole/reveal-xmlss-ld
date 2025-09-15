@@ -238,17 +238,17 @@ domains.”
 					</section>
 					<section>
 						<h3>Uniform Resource Identifier</h3>
-						<div>URI = schema / domain/host / path / fragment</div>
+						<div>URI = { schema / domain/host / path / fragment }</div>
 						<div>e.g. http://foo/bar#frag</div>
 						<div>Internationalized Resource Identifier (IRI)</div>
 						<div>https://例.jp/ファイル</div>
 					</section>
 					<section>
 						<h3>Uniform Resource Locator</h3>
-						<div>Addresses for web documents</div>
-						<div>URL identifies what exists on the web (document)</div>
-						<div>URI identifies on the web what exists (anything)</div>
-						<div>So how do we talk about apples on the Web?</div>
+						<div class="fragment">Addresses for web documents</div>
+						<div class="fragment">URL identifies what exists on the web (document)</div>
+						<div class="fragment">URI identifies on the web what exists (anything)</div>
+						<div class="fragment">So how do we talk about apples on the Web?</div>
 					</section>
 					<section>
 						<h3>URI for an apple?</h3>
@@ -273,11 +273,11 @@ domains.”
 					</section>
 					<section>
 						<h3>Designator and designatum</h3>
-						<div>The apple itself cannot be on the Web</div>
-						<div>But we can describe the apple on the Web</div>
-						<div>The URI refers to the apple</div>
-						<div>The URI is a designator</div>
-						<div>The apple is the designatum</div>
+						<div class="fragment">The apple itself cannot be on the Web</div>
+						<div class="fragment">But we can describe the apple on the Web</div>
+						<div class="fragment">The URI refers to the apple</div>
+						<div class="fragment">The URI is a designator</div>
+						<div class="fragment">The apple is the designatum</div>
 					</section>
 					<section>
 						<h3>Content Negotiation</h3>
@@ -306,7 +306,7 @@ domains.”
 						<div class="fragment" data-fragment-index="3">Subject(URI) → Property (URI) → Object/Value (URI/Literal)</div>
 						<div class="fragment" data-fragment-index="4">
 							<div class="fragment highlight-red" data-fragment-index="5">&lt;http://dbpedia.org/resource/University_of_Oxford&gt;</div>
-							<div class="fragment highlight-green" data-fragment-index="6">&lt;http://dbpedia.org/resource/location&gt;</div>
+							<div class="fragment highlight-green" data-fragment-index="6">&lt;http://dbpedia.org/ontology/location&gt;</div>
 							<div class="fragment highlight-blue" data-fragment-index="7">&lthttp://dbpedia.org/resource/Oxford&gt;</div>
 						</div>
 					</section>
@@ -318,13 +318,13 @@ domains.”
 						<pre><code data-trim>
 							"Oxford"^^&lt;http://www.w3.org/2001/XMLSchema#string&gt;
 							"2025-09-14"^^&lt;http://www.w3.org/2001/XMLSchema#date&gt;
-							"true"^^&lt;http://www.w3.org/2001/XMLSchema#booolean&gt;
+							"true"^^&lt;http://www.w3.org/2001/XMLSchema#boolean&gt;
 							"42"^^&lt;http://www.w3.org/2001/XMLSchema#integer&gt;
 						</code></pre>
 					</section>
 					<section>
 						<h3>Language</h3>
-						<div>Language Tags denote the (natural) language of text</div>
+						<div>Language tags denote the (natural) language of text</div>
 						<pre><code data-trim>
 							"University of Oxford"@en
 							"Universität Oxford"@de
@@ -334,7 +334,7 @@ domains.”
 					<section>
 						<h3>Serialization formats</h3>
 						<ul>
-							<li class="fragment">N-triples (hard to read)</li>
+							<li class="fragment">N-Triples (hard to read)</li>
 							<li class="fragment">RDF/XML (hard to read)</li>
 							<li class="fragment">Turtle Terse RDF Triple Language (easier to read)</li>
 							<li class="fragment">N-Quads</li>
@@ -360,7 +360,7 @@ domains.”
 						&lt;http://dbpedia.org/resource/University_of_Oxford&gt; .
 						&lt;http://dbpedia.org/resource/St_Edmund_Hall,_Oxford&gt;
 						&lt;http://www.w3.org/2000/01/rdf-schema#label&gt;
-						"St_Edmund_Hall"^^&lt;http://www.w3.org/2001/XMLSchema#string&gt;  .
+						"St Edmund Hall"^^&lt;http://www.w3.org/2001/XMLSchema#string&gt;  .
 						</code></pre>
 					</section>
 					<section>
@@ -402,9 +402,9 @@ domains.”
 					</section>
 					<section>
 						<h3>RDF Schema</h3>
-						<div>A data modelling vocabulary for RDF</div>
-						<div>Allows you to define classes, properties and instances</div>
-						<div>Instances are indivual members of a class</div>
+						<div class="fragment">A data modelling vocabulary for RDF</div>
+						<div class="fragment">Allows you to define classes, properties and instances</div>
+						<div class="fragment">Instances are indivual members of a class</div>
 					</section>
 					<section>
 						<h3>Defining classes and instances</h3>
@@ -535,7 +535,7 @@ domains.”
 						</ol>
 						<div class="fragment">
 							<div><a href="http://www.w3.org/DesignIssues/LinkedData.html">http://www.w3.org/DesignIssues/LinkedData.html</a></div>
-							<div style="font-size:0.75em;">Tim Tim Berners-Lee, 27th July 2006</div>
+							<div style="font-size:0.75em;">Tim Berners-Lee, 27th July 2006</div>
 						</div>
 					</section>
 					<section>
